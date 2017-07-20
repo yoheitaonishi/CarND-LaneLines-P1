@@ -31,9 +31,11 @@ If you'd like to include images to show how the pipeline works, here is how to i
 
 ### 2. Identify potential shortcomings with your current pipeline
 
-* My pipeline can't detect curve lean lines
+* My pipeline can't detect curved lean lines
 * My pipeline detect guardrail at challenge.mp4
 
 ### 3. Suggest possible improvements to your pipeline
 
-* Improvement shortcomings
+* In order to detect curved lean lines, my pipeline should use  cv2.HoughLines() for detecting lean lines. ( http://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_houghlines/py_houghlines.html )
+* In order to detect curved lean lines, my pipeline should decide canny edge's thresholding automatically. ( http://www.kerrywong.com/2009/05/07/canny-edge-detection-auto-thresholding/ )
+* In order not to detect guardrail, my pipeline should use new algorithm in this paper. ( http://airccj.org/CSCP/vol5/csit53211.pdf )
